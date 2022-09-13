@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+p {
+    max-width: 50ch;
+}
+
+img {
+    max-width: 235px;
+}
+
+input, select {
+    background: none;
+}
+
+.h1-fs {
+    font-size: clamp(2.00rem, calc(1.71rem + 1.29vw), 3.00rem);
+    font-weight: 600;
+    line-height: 2.6rem;
+}
+
+.h2-fs {
+    font-size: clamp(2.00rem, calc(1.86rem + 0.71vw), 2.50rem) 
+}
+
+.fs-18 {
+    font-size: 1.125rem;
+}
+
+.icon {
+    max-width: 24px;
+}
+
+.centre {
+    margin: 0 auto;
+}
+
+.filters-modal {
+    display: grid;
+    grid-template-rows: 3rem auto 24vh;
+}
