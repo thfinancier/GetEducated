@@ -3,6 +3,7 @@ import styles, { layout } from '../style'
 import { BookCards, Genres, Languages } from '../constants'
 import { close } from '../assets'
 import BookCard from './BookCard'
+import { Link } from 'react-router-dom'
 
 const Books = () => {
     const [searchTerm, setSearchTerm] = useState('')
@@ -13,11 +14,18 @@ const Books = () => {
         body.style.overflow = filters ? 'hidden' : 'visible'
     }, [filters])
 
+    useEffect(() => {
+        const getNumberOfBooks = document.getElementsByClassName('book').length
+        const numberOfBooks = document.querySelector('#books-number')
+
+        let setNumberOfBooks = numberOfBooks.innerHTML = getNumberOfBooks + ' ' + 'books'
+    }, [])
+
     return (
-        <section className={`flex md:flex-row flex-col`}>
+        <section className={`w-full flex flex-col`}>
             <div className='px-4 py-20 ss:px-6 sm:py-12 md:px-11'>
-                <h1 className='font-montserrat h1-fs'>Search for Inspiration</h1>
-                <p className={`font-montserrat font-regular ${styles.paragraph} mt-[4px]`}>
+                <h1 className='font-montserrat hey h1-fs'>Search for Inspiration</h1>
+                <p className={`font-montserrat hey font-regular ${styles.paragraph} mt-[4px]`}>
                     The best investement you can make - is investement in yourself
                 </p>
 
@@ -26,7 +34,7 @@ const Books = () => {
                         <input
                             type='search'
                             placeholder='Search by writter or book name'
-                            className='w-full outline-none py-[0.875em] px-[0.75em] placeholder:text-sm border border-black rounded-[1px] '
+                            className='w-full outline-none py-[0.875em] px-[0.75em] placeholder:text-sm border border-black rounded-[1px]'
                             onChange={(event) => {
                                 setSearchTerm(event.target.value)
                             }}
@@ -57,7 +65,7 @@ const Books = () => {
                         <button type='button' className='font-inter font-regular text-sm ss:text-base tracking-[6%] ml-[6px]'>Filters</button>
                     </div>
 
-                    <div className='justify-self-center text-sm ss:text-base text-gray-400'>142 books</div>
+                    <div id='books-number' className='justify-self-center text-sm ss:text-base text-gray-400'> books</div>
 
                     <div className='justify-self-end'>
                         <select name="sort by" className='outline-none text-sm ss:text-base'>
@@ -68,7 +76,7 @@ const Books = () => {
                     </div>
                 </div>
 
-                <div className={`w-full grid place-content-start ${styles.marginY}`}>
+                <div className={`w-full grid ${styles.marginY}`}>
                     <div className='flex flex-wrap justify-between gap-y-10'>
                         {BookCards.filter((book) => {
                             if (searchTerm == "") {
@@ -77,21 +85,21 @@ const Books = () => {
                                 return book
                             }
                         }).map((book) => (
-                            <BookCard key={book.id} {...book} />
+                            <BookCard id='book' key={book.id} {...book}/>
                         ))}
                     </div>
                 </div>
             </div>
 
-            <div className={`${filters ? 'translate-x-0' : 'translate-x-[100rem]'}
+            <div className={`${filters ? 'translate-x-0' : 'translate-x-[1000rem]'}
             fixed top-0 z-50 bg-white w-full h-full filters-modal transition-all duration-500 ease-in-out
             `}>
                 <div className='flex justify-end items-center pr-5 border-b bg-white'>
-                    <img 
-                    src={close} 
-                    alt="close" 
-                    className='icon w-5 h-5 cursor-pointer' 
-                    onClick={() => setFilters(!filters)}
+                    <img
+                        src={close}
+                        alt="close"
+                        className='icon w-5 h-5 cursor-pointer'
+                        onClick={() => setFilters(!filters)}
                     />
                 </div>
 

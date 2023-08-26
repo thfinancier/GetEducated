@@ -85,16 +85,16 @@ export const Formats = [
 
 export const Languages = [
     {
-        id: 'russian',
-        name: 'Russian',
-    },
-    {
         id: 'english',
         name: 'English',
     },
     {
         id: 'german',
         name: 'German',
+    },
+    {
+        id: 'russian',
+        name: 'Russian',
     },
 ]
 
@@ -105,6 +105,16 @@ export const BookCards = [
         title: 'Think and Grow Rich', 
         author: 'Napoleon Hill',
         link: '',
+        rating: '5',
+        numberOfPeople: '95%',
+        apple: '',
+        spotify: '',
+        google: '',
+        genre: 'self-help',
+        language: 'Eng',
+        publishedIn: '1937',
+        duration: '10:47:00',
+        description: 'Think and Grow Rich is a book written by Napoleon Hill in 1937 and promoted as a personal development and self-improvement book. He claimed to be inspired by a suggestion from business magnate and later-philanthropist Andrew Carnegie.',
     },
     {
         id: 'book-2',
@@ -112,6 +122,15 @@ export const BookCards = [
         title: 'The Richest Man in Babylon', 
         author: 'George S. Clason',
         link: '',
+        rating: '4.5',
+        apple: '',
+        spotify: '',
+        google: '',
+        genre: 'self-help',
+        language: 'Eng',
+        publishedIn: '',
+        duration: '',
+        description: '',
     },
     {
         id: 'book-3',
@@ -119,6 +138,15 @@ export const BookCards = [
         title: 'The Almanack of Naval Ravikant', 
         author: 'Eric Jorgenson',
         link: '',
+        rating: '4.5',
+        apple: '',
+        spotify: '',
+        google: '',
+        genre: 'Self-help',
+        language: 'Eng',
+        publishedIn: '',
+        duration: '',
+        description: '',
     },
     {
         id: 'book-4',
@@ -126,6 +154,15 @@ export const BookCards = [
         title: 'Rich Dad and Poor Dad', 
         author: 'Robert T. Kiyosaki',
         link: '',
+        rating: '4.5',
+        apple: '',
+        spotify: '',
+        google: '',
+        genre: 'Personal Finance',
+        language: 'Eng',
+        publishedIn: '',
+        duration: '',
+        description: '',
     },
     {
         id: 'book-5',
@@ -133,6 +170,15 @@ export const BookCards = [
         title: 'The 4-Hour Workweek', 
         author: 'Timothy Ferriss',
         link: '',
+        rating: '4.5',
+        apple: '',
+        spotify: '',
+        google: '',
+        genre: 'Self-help',
+        language: 'Eng',
+        publishedIn: '',
+        duration: '',
+        description: '',
     },
 ]
 

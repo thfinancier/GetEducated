@@ -26,6 +26,13 @@ input, select {
     background: none;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
 .h1-fs {
     font-size: clamp(2.00rem, calc(1.71rem + 1.29vw), 3.00rem);
     font-weight: 600;
@@ -44,6 +51,22 @@ input, select {
     max-width: 24px;
 }
 
+.icon-star {
+    max-width: 24px;
+}
+
+.icon-star:not(:last-child) {
+    margin-right: 10px;
+}
+
+.button {
+    min-width: 105px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    padding: .625em 0;
+}
+
 .centre {
     margin: 0 auto;
 }
@@ -51,4 +74,15 @@ input, select {
 .filters-modal {
     display: grid;
     grid-template-rows: 3rem auto 24vh;
+}
+
+.modal-img-shadow {
+    filter: drop-shadow(23px 30px 15px rgba(0, 0, 0, 0.01)) 
+    drop-shadow(13px 17px 13px rgba(0, 0, 0, 0.05)) 
+    drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.09)) 
+    drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
 }

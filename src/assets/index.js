@@ -6,6 +6,9 @@ import thinkAndGrowRich from './thinkandgrowrich.jpg'
 import thenavalmanack from './navalmanack.jpg'
 import menu from './align-left.png'
 import close from './close.png'
+import star from './Star.png'
+import halfStar from './star-half.png'
+import unfilledStar from './unfilled-star.png'
 
 
 export { 
@@ -17,4 +20,7 @@ export {
     thenavalmanack,
     menu,
     close,
+    star,
+    halfStar,
+    unfilledStar,
 }

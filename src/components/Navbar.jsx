@@ -11,12 +11,12 @@ const Navbar = () => {
     }, [toggle])
 
     return (
-        <nav className='border-b border-b-neutral-200 relative z-10'>
-            <div className='bg-white p-4 ss:px-6 md:py-6 md:px-11 flex flex-row sm:justify-between items-center relative z-20'>
-            <div className='block md:hidden'>
+        <nav className='border-b border-b-neutral-200 relative z-20'>
+            <div className='bg-white p-4 ss:px-6 md:py-6 md:px-11 flex flex-row sm:justify-between items-center relative z-30'>
+            <div className='flex items-center md:hidden'>
                 <img src={toggle ? close : menu}
                 alt="menu"
-                className='icon object-contain cursor-pointer' 
+                className='icon object-contain cursor-pointer absolute' 
                 onClick={() => setToggle(!toggle)}
                 />
 

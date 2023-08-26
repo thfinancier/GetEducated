@@ -1,12 +1,15 @@
 import styles from './style'
-import { Navbar, Books, Footer } from './components'
+import { Navbar, Books, BookModal, Footer } from './components'
+import { Routes, Route } from 'react-router'
 
 const App = () => (
     <div className="bg-primary w-full">
       <div className={`${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
-          <Books />
+          <Routes>
+            <Route path='/' element={<Books />} />
+          </Routes>
         </div>
       </div>
 
